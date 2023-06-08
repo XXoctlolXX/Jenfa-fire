@@ -22,22 +22,51 @@ public class GrabbySnabby : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange))
                 {
-                    //PickUpObject
+                    PickUpObject(hit.transform.gameObject);
                 }
             }
             else
             {
-                //DropObject
+                DropObject(heldObj);
             }
         }
-        if (heldObj != null)
+        if (heldObj != null) 
         {
-            //MoveObject
+            MoveObject();
         }
     }
 
-    void PickupObject(GameObject pickObj)
+    void MoveObject()
     {
+        if(Vector3.Distance(heldObj.transform.position, holdArea.position)> 0.1f)
+        {
+            Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
+            heldObjRB.AddForce(moveDirection * pickupForce);
+        }
+    }
 
+    void PickUpObject(GameObject pickObj)
+    {
+        if(pickObj.GetComponent<Rigidbody>())
+        {
+            heldObjRB = pickObj.GetComponent<Rigidbody>();
+            heldObjRB.useGravity = false;
+            heldObjRB.drag = 10;
+            heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
+
+            heldObjRB.transform.parent = holdArea;
+            heldObj = pickObj;
+        }
+    }
+
+    void DropObject(GameObject pickObj)
+    {
+      
+            heldObjRB.useGravity = true;
+            heldObjRB.drag = 1;
+            heldObjRB.constraints = RigidbodyConstraints.None;
+
+            heldObjRB.transform.parent = null;
+            heldObj = null;
     }
 }
