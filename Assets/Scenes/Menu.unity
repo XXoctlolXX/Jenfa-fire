@@ -440,7 +440,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 147854998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: c730c3cad30ff7343b0c351cd45484ff, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &147854998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,9 +569,8 @@ GameObject:
   - component: {fileID: 363380295}
   - component: {fileID: 363380294}
   - component: {fileID: 363380293}
-  - component: {fileID: 363380296}
   m_Layer: 5
-  m_Name: game
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,7 +639,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363380294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: c730c3cad30ff7343b0c351cd45484ff, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &363380294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,18 +690,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363380291}
   m_CullTransparentMesh: 1
---- !u!114 &363380296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363380291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338805bf87934ca45b61befd92289c10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &940343753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1011,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game
+  m_Text: Play
 --- !u!222 &1636236636
 CanvasRenderer:
   m_ObjectHideFlags: 0
