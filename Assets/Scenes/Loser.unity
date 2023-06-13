@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 164337996}
   - component: {fileID: 164337995}
   - component: {fileID: 164337998}
+  - component: {fileID: 164337999}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -207,16 +208,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c730c3cad30ff7343b0c351cd45484ff, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 164337999}
+        m_TargetAssemblyTypeName: ChangeLevel, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &164337996
@@ -258,6 +259,18 @@ CanvasRenderer:
   m_GameObject: {fileID: 164337993}
   m_CullTransparentMesh: 1
 --- !u!114 &164337998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164337993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c730c3cad30ff7343b0c351cd45484ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &164337999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
